@@ -8,17 +8,17 @@ namespace MoneyMaker
         {
             Console.WriteLine("Welcome to Money Maker!");
             Console.WriteLine("Enter an amount you would like to convert to coins:");
-            double cents = Math.Floor(Convert.ToDouble(Console.ReadLine()));
+            var cents = Math.Floor(Convert.ToDouble(Console.ReadLine()));
 
             Console.WriteLine($"{cents} cents is equal to...");
 
-            int goldValue = 10;
-            int silverValue = 5;
+            var goldValue = 10;
+            var silverValue = 5;
 
-            double goldCoins = Math.Floor(cents / goldValue);
-            double remainder = cents % goldValue;
+            var goldCoins = Math.Floor(cents / goldValue);
+            var remainder = cents % goldValue;
 
-            double silverCoins = Math.Floor(remainder / silverValue);
+            var silverCoins = Math.Floor(remainder / silverValue);
             remainder = remainder % silverValue;
 
             Console.WriteLine($"Gold coins: {goldCoins}");
